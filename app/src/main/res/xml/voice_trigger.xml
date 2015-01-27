@@ -1,0 +1,12 @@
+<!-- For more information about voice trigger, check out: https://developers.google.com/glass/develop/gdk/starting-glassware -->
+<!-- Works but is generic
+<trigger command="SHOW_ME_A_DEMO" />
+-->
+
+<trigger keyword="@string/app_name" >
+
+<!-- This checks for network access and gives a warning if not present
+    <constraints network="true" />
+-->
+</trigger>
+
