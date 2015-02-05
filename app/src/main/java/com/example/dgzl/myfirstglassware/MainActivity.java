@@ -108,17 +108,29 @@ public class MainActivity extends Activity {
         return super.onCreatePanelMenu(featureId, menu);
     }
 
-    public void findDevelopers(String platform){
+    public void findDevelopers(String platform) {
+        switch (platform) {
+            case "Points":
+                mView = buildView(platform);
+                break;
+            case "Details":
+                
+                break;
+
+        }
+        setContentView(mCardScroller);
+        return;
     }
+
     @Override
     public boolean onMenuItemSelected(int featureId, MenuItem item) {
         if (featureId == WindowUtils.FEATURE_VOICE_COMMANDS || featureId ==  Window.FEATURE_OPTIONS_PANEL) {
             switch (item.getItemId()) {
-                case R.id.find_android:
-                    findDevelopers("Android");
+                case R.id.find_points:
+                    findDevelopers("Points");
                     break;
-                case R.id.find_javascript:
-                    findDevelopers("Java Script");
+                case R.id.give_details:
+                    findDevelopers("Details");
                     break;
                 case R.id.find_ios:
                     findDevelopers("iOS");
@@ -150,11 +162,21 @@ public class MainActivity extends Activity {
         card.setText(R.string.app_name);
 //      deprecated
 //      card.setImageLayout(CardBuilder.ImageLayout.LEFT);
-        card.addImage(R.drawable.logo);
+        card.addImage(R.drawable.bb);
         return card.getView();
 
     }
 
+    private View buildView(String title) {
+
+        CardBuilder card = new CardBuilder(this, CardBuilder.Layout.TEXT);
+        card.setText(title);
+//      deprecated
+//      card.setImageLayout(CardBuilder.ImageLayout.LEFT);
+        card.addImage(R.drawable.logo);
+        return card.getView();
+
+    }
 
     private GestureDetector createGestureDetector(Context context) {
         GestureDetector gestureDetector = new GestureDetector(context);

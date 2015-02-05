@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/find_android"
-        android:title="Points" />
-    <item android:id="@+id/find_javascript"
-        android:title="Detail View" />
-    <item android:id="@+id/find_ios"
-        android:title="Top developer" />
+    <item
+        android:id="@+id/find_points"
+        android:title="@string/points" />
+    <item
+        android:id="@+id/give_details"
+        android:title="Top Android Developer" />
+    <item
+        android:id="@+id/find_ios"
+        android:title="Help With This" />
+
+
 </menu>
+
+
+    <!--
+        official commands that might be useful:
+        =======================================
+
+        change mode to
+        check me in
+        check this out
+        explore nearby
+        find a place
+        go foreword
+        go back
+        help with this
+        make a request
+        next track
+        pause video
+        play video
+        post an update
+        post to
+
+-->
