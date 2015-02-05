@@ -1,7 +1,18 @@
+/*
+
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.google.android.glass.app.Card;
+import com.google.android.glass.widget.CardBuilder;
+import com.google.android.glass.widget.CardScrollAdapter;
+
+import java.util.List;
+
 public class DeveloperAdapter extends CardScrollAdapter {
-    private List<Card> mCards;
+    private List<CardBuilder> mCards;
     private List<DeveloperModel> mData;
-    public DeveloperAdapter(List<Card> cards){
+    public DeveloperAdapter(List<CardBuilder> cards){
         this.mCards = cards;
     }
     @Override
@@ -21,3 +32,5 @@ public class DeveloperAdapter extends CardScrollAdapter {
         return this.mCards.indexOf(o);
     }
 }
+
+*/

@@ -1,3 +1,8 @@
+/*
+
+
+import java.io.Serializable;
+
 public class DeveloperModel implements Serializable {
     private String name;
     public String getName(){
@@ -21,3 +26,5 @@ public class DeveloperModel implements Serializable {
         this.image=image;
     }
 }
+
+*/

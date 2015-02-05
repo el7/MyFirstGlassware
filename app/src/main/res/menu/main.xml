@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/find_android"
-        android:title="Top Android developer" />
+        android:title="Points" />
     <item android:id="@+id/find_javascript"
-        android:title="Top JavaScript developer" />
+        android:title="Detail View" />
     <item android:id="@+id/find_ios"
-        android:title="Top iOS developer" />
+        android:title="Top developer" />
 </menu>
