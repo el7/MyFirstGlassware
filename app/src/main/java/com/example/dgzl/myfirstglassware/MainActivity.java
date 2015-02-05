@@ -54,7 +54,6 @@ public class MainActivity extends Activity {
         super.onCreate(bundle);
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-
         getWindow().requestFeature(WindowUtils.FEATURE_VOICE_COMMANDS);
 
         mView = buildView();
@@ -88,14 +87,10 @@ public class MainActivity extends Activity {
         mCardScroller.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Plays disallowed sound to indicate that TAP actions are not supported.
                 openOptionsMenu();
-                /* taken out because tut told me so
-                AudioManager am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-                am.playSoundEffect(Sounds.DISALLOWED);
-                */
             }
         });
+        mGestureDetector = createGestureDetector(this);
         setContentView(mCardScroller);
     }
 
@@ -114,7 +109,7 @@ public class MainActivity extends Activity {
                 mView = buildView(platform);
                 break;
             case "Details":
-                
+
                 break;
 
         }
@@ -127,10 +122,10 @@ public class MainActivity extends Activity {
         if (featureId == WindowUtils.FEATURE_VOICE_COMMANDS || featureId ==  Window.FEATURE_OPTIONS_PANEL) {
             switch (item.getItemId()) {
                 case R.id.find_points:
-                    findDevelopers("Points");
+                    findDevelopers("Android");
                     break;
                 case R.id.give_details:
-                    findDevelopers("Details");
+                    findDevelopers("Java Script");
                     break;
                 case R.id.find_ios:
                     findDevelopers("iOS");
@@ -222,8 +217,6 @@ public class MainActivity extends Activity {
         return gestureDetector;
     }
 
-
-
     @Override
     public boolean onGenericMotionEvent(MotionEvent event) {
         if (mGestureDetector != null) {
@@ -231,7 +224,6 @@ public class MainActivity extends Activity {
         }
         return false;
     }
-
 
 
 }

@@ -1,4 +1,4 @@
-/*
+
 
 
 import java.io.Serializable;
@@ -26,5 +26,3 @@ public class DeveloperModel implements Serializable {
         this.image=image;
     }
 }
-
-*/

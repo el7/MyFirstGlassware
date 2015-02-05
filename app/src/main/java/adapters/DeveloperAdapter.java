@@ -1,4 +1,4 @@
-/*
+
 
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,5 +32,3 @@ public class DeveloperAdapter extends CardScrollAdapter {
         return this.mCards.indexOf(o);
     }
 }
-
-*/

@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/find_points"
-        android:title="@string/points" />
+        android:id="@+id/find_android"
+        android:title="Top Android developer" />
     <item
-        android:id="@+id/give_details"
-        android:title="Top Android Developer" />
+        android:id="@+id/find_javascript"
+        android:title="Top JavaScript developer" />
     <item
         android:id="@+id/find_ios"
-        android:title="Help With This" />
-
-
+        android:title="Top iOS developer" />
 </menu>
 
 
