@@ -53,7 +53,10 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
 
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        // adds "ok glass" for voice commands
         getWindow().requestFeature(WindowUtils.FEATURE_VOICE_COMMANDS);
 
         mView = buildView();
@@ -94,6 +97,7 @@ public class MainActivity extends Activity {
         setContentView(mCardScroller);
     }
 
+    // function inflates the menu from main.xml
     @Override
     public boolean onCreatePanelMenu(int featureId, Menu menu){
         if (featureId == WindowUtils.FEATURE_VOICE_COMMANDS || featureId ==  Window.FEATURE_OPTIONS_PANEL) {
@@ -106,7 +110,7 @@ public class MainActivity extends Activity {
     public void findDevelopers(String platform) {
         switch (platform) {
             case "Points":
-                mView = buildView(platform);
+                mView = buildView();
                 break;
             case "Details":
 
@@ -117,19 +121,32 @@ public class MainActivity extends Activity {
         return;
     }
 
+    // menu handler
     @Override
     public boolean onMenuItemSelected(int featureId, MenuItem item) {
         if (featureId == WindowUtils.FEATURE_VOICE_COMMANDS || featureId ==  Window.FEATURE_OPTIONS_PANEL) {
             switch (item.getItemId()) {
-                case R.id.find_points:
+                case R.id.find_android:
                     findDevelopers("Android");
                     break;
-                case R.id.give_details:
+                case R.id.find_javascript:
                     findDevelopers("Java Script");
                     break;
                 case R.id.find_ios:
                     findDevelopers("iOS");
                     break;
+                /* should turn into this -->
+                case R.id.point_view:
+                    pointView();
+                    break;
+                case R.id.detail_view:
+                    detailView();
+                    break;
+                case R.id.edit_view:
+                    editView();
+                    break;
+                */
+
             }
             return true;
         }
@@ -150,7 +167,9 @@ public class MainActivity extends Activity {
 
     /**
      * Builds a Glass styled "Hello World!" view using the {@link CardBuilder} class.
+     * -- customizes the card layout
      */
+
     private View buildView() {
 
         CardBuilder card = new CardBuilder(this, CardBuilder.Layout.TEXT);
@@ -162,17 +181,7 @@ public class MainActivity extends Activity {
 
     }
 
-    private View buildView(String title) {
-
-        CardBuilder card = new CardBuilder(this, CardBuilder.Layout.TEXT);
-        card.setText(title);
-//      deprecated
-//      card.setImageLayout(CardBuilder.ImageLayout.LEFT);
-        card.addImage(R.drawable.logo);
-        return card.getView();
-
-    }
-
+    // *tap* functions
     private GestureDetector createGestureDetector(Context context) {
         GestureDetector gestureDetector = new GestureDetector(context);
 

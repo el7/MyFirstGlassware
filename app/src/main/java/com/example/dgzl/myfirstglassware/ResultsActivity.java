@@ -1,14 +1,14 @@
 
-
+/*
 
 public void ResultsActivity (){
 
-public static final String SEARCH="search";
-private String mPlatform="Android";
+    public static final String SEARCH="search";
+    private String mPlatform="Android";
 
-        return;
+    return;
 }
-
+*/
 
 
 // make sure that is extends Activity
