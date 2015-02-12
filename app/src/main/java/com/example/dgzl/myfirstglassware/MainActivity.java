@@ -123,6 +123,7 @@ public class MainActivity extends Activity {
 
     /* demo function */
     public void findDevelopers(String platform) {
+        /*
         switch (platform) {
             case "Points":
                 mView = buildView();
@@ -134,6 +135,7 @@ public class MainActivity extends Activity {
         }
         setContentView(mCardScroller);
         return;
+        */
     }
 
     // menu handler
