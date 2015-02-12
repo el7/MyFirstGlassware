@@ -102,6 +102,26 @@ public class MainActivity extends Activity {
         return super.onCreatePanelMenu(featureId, menu);
     }
 
+
+    /* functions to do stuff */
+    public void pointView(){
+        // show points and stuff
+        return;
+    }
+    public void detailView(){
+        return;
+        // show details of points
+    }
+    public void editView(){
+        // allow editing of points
+        return;
+    }
+    public void helpView(){
+        // show helper menu for voice commands, etc.
+        return;
+    }
+
+    /* demo function */
     public void findDevelopers(String platform) {
         switch (platform) {
             case "Points":
@@ -130,14 +150,18 @@ public class MainActivity extends Activity {
                 case R.id.find_ios:
                     findDevelopers("iOS");
                     break;
-                /* should turn into this -->
-                case R.id.point_view:
+                case R.id.help:
+                    // something to do with showing a list of commands
+                    // helpView();
+                    break;
+                /* should turn into:
+                case R.id.points:
                     pointView();
                     break;
-                case R.id.detail_view:
+                case R.id.details:
                     detailView();
                     break;
-                case R.id.edit_view:
+                case R.id.edit:
                     editView();
                     break;
                 */

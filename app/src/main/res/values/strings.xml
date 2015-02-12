@@ -9,7 +9,9 @@
     <string name="android_dev">Top Android Developer</string>
     <string name="js_dev">Top Javascript Developer</string>
     <string name="ios_dev">Top iOS Developer</string>
-    <!-- these are in progress
+    <string name="help_view">Show Help View</string>
+
+    <!-- these are in progress, belong above
     <string name="point_view">Show Point View</string>
     <string name="detail_view">Show Detail View</string>
     <string name="edit_view">Show Edit View</string>

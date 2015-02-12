@@ -6,13 +6,30 @@
 
     <item
         android:id="@+id/find_android"
-        android:title="Top Android developer" />
+        android:title="@string/android_dev" />
     <item
         android:id="@+id/find_javascript"
-        android:title="Top JavaScript developer" />
+        android:title="@string/js_dev" />
     <item
         android:id="@+id/find_ios"
-        android:title="Top iOS developer" />
+        android:title="@string/ios_dev" />
+    <item
+        android:id="@+id/help"
+        android:title="@string/help_view" />
+
+    <!-- should turn into:
+    <item
+        android:id="@+id/points"
+        android:title="@string/point_view" />
+    <item
+        android:id="@+id/details"
+        android:title="@string/detail_view" />
+    <item
+        android:id="@+id/edit"
+        android:title="@string/edit_view" />
+
+    -->
+
 </menu>
 
 
@@ -36,3 +53,4 @@
         post to
 
 -->
+
