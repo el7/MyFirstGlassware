@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- general strings -->
     <string name="app_name">Give Points</string>
     <string name="title_activity_main">Point View</string>
-    <string name="hello_world">Long:\nLat:</string>
+
+    <!-- optionsMenu() items (the thing that comes up when 'ok glass' or tap event -->
+    <string name="android_dev">Top Android Developer</string>
+    <string name="js_dev">Top Javascript Developer</string>
+    <string name="ios_dev">Top iOS Developer</string>
+    <!-- these are in progress
+    <string name="point_view">Show Point View</string>
+    <string name="detail_view">Show Detail View</string>
+    <string name="edit_view">Show Edit View</string>
+    <string name="help_view">Show Help View</string>
+    -->
+
+
+    <!-- other strings -->
     <string name="start_app_name">Make Points</string>
     <string name="title_activityresults">Activity Results</string>
     <string name="points">Find points</string>
